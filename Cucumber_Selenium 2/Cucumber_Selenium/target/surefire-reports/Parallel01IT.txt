@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: Parallel01IT
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 2, Skipped: 3, Time elapsed: 10.023 sec <<< FAILURE! - in Parallel01IT
+Given User is on Home Page(Scenario: Successful Login with Valid Credentials)  Time elapsed: 0.008 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Connection refused: connect
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'SWAP-PC', ip: '192.168.43.190', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
+Driver info: driver.version: AppiumDriver
+Caused by: java.net.ConnectException: Connection refused: connect
+
+Scenario: Successful Login with Valid Credentials  Time elapsed: 0.01 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Connection refused: connect
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'SWAP-PC', ip: '192.168.43.190', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
+Driver info: driver.version: AppiumDriver
+Caused by: java.net.ConnectException: Connection refused: connect
+

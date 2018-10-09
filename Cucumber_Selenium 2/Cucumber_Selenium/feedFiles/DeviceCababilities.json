@@ -1,0 +1,130 @@
+			  {
+				  "capabilities":
+					  [
+						{
+						"platformName": "iOS", 
+						"browserName": "safari",
+						"maxInstances": 1,
+						"cleanSession": true
+						},
+					   {
+						"platformName": "MAC", 
+						"browserName": "safari",
+						"maxInstances": 1,
+						"cleanSession": true
+						},
+						{
+						"platformName": "ANDROID", 
+						"maxInstances": 1,
+						"cleanSession": true,
+					 	"deviceName": "192.168.14.34:5555"
+						}
+					  ],
+				  "configuration":
+				  {
+					"cleanUpCycle":2000,
+					"timeout":30000,
+					"proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+					"url":"http://192.168.14.39:4723/wd/hub",
+					"host": "192.168.14.39",
+					"port": 4723,
+					"maxSession": 1,
+					"register": true,
+					"registerCycle": 5000,
+					"hubPort": 4444,
+					"hubHost": "192.168.14.72"
+				  }
+			}
+			
+			
+			 {
+				"capabilities":
+				[
+					{
+					"platformName": "ANDROID", 
+					"maxInstances": 1,
+					"cleanSession": true,
+				 "deviceName": "192.168.14.34:5555"
+					}
+				  ],
+			  "configuration":
+			  {
+				"cleanUpCycle":2000,
+				"timeout":30000,
+				"proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+				"url":"http://192.168.14.34:4724/wd/hub",
+				"host": "192.168.14.34",
+				"port": 4724,
+				"maxSession": 1,
+				"register": true,
+				"registerCycle": 5000,
+				"hubPort": 4444,
+				"hubHost": "192.168.14.72"
+			  }
+			}
+			---------------------------------------------------------------ANDROID------------------------------------------------------
+			
+			---------------------------------------------------------------ANDROID and IOS Native apps ----------------------------------
+			 /Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js -p 4725 -U 192.168.14.39:5555 
+			--nodeconfig /Users/Priyanka/Documents/androidNativeConfig.json --app /Users/Priyanka/appautomation/automationScripts/app/salesforce_AWS.apk
+			
+			{
+			  "capabilities":
+				  [
+					{
+					"platformName": "Android", 
+					"platform": "OS 10.11.6",
+					"app": "/Users/Priyanka/appautomation/automationScripts/app/salesforce_AWS.apk"
+					}
+				  ],
+			  "configuration":
+			  {
+				"cleanUpCycle":2000,
+				"timeout":30000,
+				"proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+				"url":"http://192.168.14.39:4725/wd/hub",
+				"host": "192.168.14.39",
+				"port": 4725,
+				"maxSession": 1,
+				"register": true,
+				"registerCycle": 5000,
+				"hubPort": 4444,
+				"hubHost": "192.168.14.72"
+			  }
+			}
+			
+			
+            /Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js -p 4726 -U 192.168.14.39:5555 
+			--nodeconfig /Users/Priyanka/Documents/iOSNativeConfig.json --app /Users/Priyanka/appautomation/automationScripts/app/Agent_AWS.ipa
+			
+			{
+			  "capabilities":
+				  [
+			 {
+					"platformName": "iOS", 
+					"platform": "OS 10.11.6",
+					"app": "/Users/Priyanka/appautomation/automationScripts/app/Agent_AWS.ipa"
+					}
+				   
+				  ],
+			  "configuration":
+			  {
+				"cleanUpCycle":2000,
+				"timeout":30000,
+				"proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+				"url":"http://192.168.14.39:4726/wd/hub",
+				"host": "192.168.14.39",
+				"port": 4726,
+				"maxSession": 1,
+				"register": true,
+				"registerCycle": 5000,
+				"hubPort": 4444,
+				"hubHost": "192.168.14.72"
+			  }
+			}
+
+			---------------------------------------------------------------------------------------------------------------------------------------------
+
+java -jar selenium-server-standalone-2.53.1.jar -role node -port 5556 -hub http://192.168.14.72:4444/grid/register -browser browserName="internet explorer" -Dwebdriver.ie.driver=C:\Workarea\Driver\IEDriverServer.exe
+
+java -jar selenium-server-standalone-2.53.1.jar -role node -port 5557 -hub http://192.168.14.72:4444/grid/register -browser browserName=chrome -Dwebdriver.chrome.driver=C:\Workarea\Driver\chromedriver.exe
